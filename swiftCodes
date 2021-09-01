@@ -1,0 +1,31 @@
+//function to sort even and odd in swift
+//function to sort 0 and 1 in swift
+
+
+
+
+import UIKit
+func changesarray(arr:[Int]) -> [Int] {
+    var mainarray = arr
+    var l:Int = 0
+    var r:Int =  mainarray.count - 1
+    while(l < r) {
+        while(mainarray[l] % 2 == 0 && l < r){
+            l = l + 1
+        }
+        while(mainarray[r] % 2 == 1 && l < r){
+            r = r - 1
+        }
+        if(l < r) {
+            mainarray.swapAt(l, r)
+            l = l + 1
+            r = r - 1
+        }
+        
+    }
+   print(mainarray)
+   return mainarray
+}
+
+let sortedArray = changesarray(arr: [3,2,4,23,43,12,43,12,1,0,3,2])
+print(sortedArray)
