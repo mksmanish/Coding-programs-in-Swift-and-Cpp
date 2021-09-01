@@ -1,0 +1,18 @@
+//function to reverse the String
+
+
+
+
+import UIKit
+func changestring(str:String) -> String {
+    
+    var reverse = ""
+    for char in str {
+        reverse =  String(char) + reverse
+    }
+    return reverse
+  
+}
+
+let sortedArray = changestring(str: "manish kumar")
+print(sortedArray)
