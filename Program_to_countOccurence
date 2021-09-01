@@ -1,0 +1,22 @@
+// program to count the occurence of charcter in string
+import UIKit
+
+
+func countOccurence(str:String) {
+    let arr = Array(str)
+    var counts: [Character: Int] = [:]
+
+    for item in arr
+    {
+        counts[item] = (counts[item] ?? 0) + 1
+    }
+
+    print(counts)  // "[BAR: 1, FOOBAR: 1, FOO: 2]"
+
+    for (key, value) in counts {
+        print("\(key) occurs \(value) time(s)")
+    }
+
+}
+
+print(countOccurence(str: "manishdfman"))
