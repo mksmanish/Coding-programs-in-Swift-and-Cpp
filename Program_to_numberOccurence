@@ -1,0 +1,22 @@
+// program to count the occurence of number in Array
+import UIKit
+
+
+func countOccurence(str:[Int]) {
+    let arr = str
+    var counts: [Int: Int] = [:]
+
+    for item in arr
+    {
+        counts[item] = (counts[item] ?? 0) + 1
+    }
+
+    print(counts)  // "[BAR: 1, FOOBAR: 1, FOO: 2]"
+
+    for (key, value) in counts {
+        print("\(key) occurs \(value) time(s)")
+    }
+
+}
+
+countOccurence(str: [2,2,3,2,3,2,2,1,2,1,1,1,123,3])
