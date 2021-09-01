@@ -1,0 +1,21 @@
+//function to reverse the Number
+
+
+
+
+import UIKit
+func changeNumber(num:Int) -> Int {
+    var revNum = num
+    var reverse:Int = 0
+    while (revNum != 0) {
+        let k = revNum % 10
+        reverse = reverse * 10 + k
+        revNum = revNum / 10
+    }
+    
+    return reverse
+  
+}
+
+let sortedArray =  changeNumber(num: 123123453)
+print(sortedArray)
