@@ -1,0 +1,18 @@
+// function to check string palindrome
+
+import UIKit
+
+func checkpalindrome(str:String) -> Bool {
+    var rev:String = ""
+    for char in str {
+        rev = String(char) + rev
+    }
+    if (str == rev) {
+        return true
+    }
+    
+    return false
+    
+}
+
+print(checkpalindrome(str: "mad"))
