@@ -1,0 +1,25 @@
+// understanding singelton
+
+
+import UIKit
+class notreal {
+    
+    static let shared = notreal()
+    func sumInt(num:Int,num2:Int) -> Int{
+        return num + num2
+    }
+    
+    func sumdouble(num:Double,num2:Double) -> Double {
+        return num + num2
+    }
+    
+    func sumfloat(num:Float,num2:Float) -> Float {
+        return num + num2
+    }
+}
+
+notreal.shared.sumInt(num: 23, num2: 34)
+
+
+
+
