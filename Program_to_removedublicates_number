@@ -1,0 +1,24 @@
+// function to remove the dublicate elements
+
+
+
+import UIKit
+
+func countNumber(arr:[Int]) {
+    let mainarr = arr
+    var realArr = [Int]()
+    var dict = [Int:Int]()
+    for i in 0..<mainarr.count {
+        dict[mainarr[i]] = (dict[mainarr[i]] ?? 0) + 1
+    }
+    for (key,value) in dict {
+        if value > 1 {
+            realArr.append(key)
+        }else{
+            realArr.append(key)
+        }
+    }
+    print(realArr)
+}
+
+countNumber(arr: [3,2,2,1,6,7,8,9,2,10])
