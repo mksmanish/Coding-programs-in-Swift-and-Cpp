@@ -1,0 +1,31 @@
+// understanding generics
+
+
+import UIKit
+class notreal {
+    func sumInt(num:Int,num2:Int) -> Int{
+        return num + num2
+    }
+    
+    func sumdouble(num:Double,num2:Double) -> Double {
+        return num + num2
+    }
+    
+    func sumfloat(num:Float,num2:Float) -> Float {
+        return num + num2
+    }
+}
+
+let obj = notreal()
+obj.sumInt(num: 34, num2: 34)
+
+
+
+func sum<T:Numeric>(num:T,num2:T) -> T {
+    return num + num2
+}
+
+print(sum(num: 3.5, num2: 3.677777))
+
+
+
