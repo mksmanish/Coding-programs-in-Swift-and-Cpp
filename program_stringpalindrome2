@@ -1,0 +1,29 @@
+// understanding stringPalindrom
+
+
+import UIKit
+class notreal {
+    
+    static let shared = notreal()
+    func checkPalindrom(str:String) -> Bool {
+        let stringArr = Array(str)
+        if stringArr.count % 2 == 0 {
+            return false
+        }
+        for i in 0..<stringArr.count/2 {
+            if stringArr[i] == stringArr[stringArr.count - i - 1] {
+                continue
+            }else {
+                return false
+            }
+        }
+        return true
+    }
+   
+}
+notreal.shared.checkPalindrom(str: "mam")
+
+
+
+
+
