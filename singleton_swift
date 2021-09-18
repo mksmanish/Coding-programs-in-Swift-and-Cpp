@@ -1,0 +1,17 @@
+class NetworkManager {
+
+    // MARK: - Properties
+
+    static let shared = NetworkManager(baseURL: API.baseURL)
+
+    // MARK: -
+
+    let baseURL: URL
+
+    // Initialization
+
+    private init(baseURL: URL) {
+        self.baseURL = baseURL
+    }
+
+}
